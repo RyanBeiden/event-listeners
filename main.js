@@ -72,11 +72,12 @@ const printToDom = (selector, textToPrint) => {
 const buildPies = (pieCollection) => {
   let domString = '';
   for (let i = 0; i < pieCollection.length; i++) {
+    const aLaModeText = (pieCollection[i].aLaMode === true) ? 'w/ Ice Cream' : 'w/o Ice Cream';
     domString += `
       <div class="pie">
         <h2>${pieCollection[i].type}</h2>
         <img src="${pieCollection[i].imageUrl}" alt="image of ${pieCollection[i].type}">
-        <p>This ${pieCollection[i].type} pie is a ${pieCollection[i].size} pie, it's owned by ${pieCollection[i].owner}, has a ${pieCollection[i].crust} crust.</p>
+        <p>This ${pieCollection[i].type} pie is a ${pieCollection[i].size} pie, it's owned by ${pieCollection[i].owner}, has a ${pieCollection[i].crust} crust and is served ${aLaModeText}.</p>
         <h4>Price: ${pieCollection[i].price}</h4>
       </div>
     `;
@@ -87,6 +88,10 @@ const buildPies = (pieCollection) => {
 const filterPiesEvent = (event) => {
   const buttonId = event.target.id;
   const tempPieCollection = [];
+  if (buttonId === 'all') {
+    buildPies(pies);
+    return;
+  }
   for (let i = 0; i < pies.length; i++) {
     if (pies[i].owner === buttonId) {
       tempPieCollection.push(pies[i]);
@@ -99,6 +104,7 @@ const clickEvents = () => {
   document.querySelector('#luke').addEventListener('click', filterPiesEvent);
   document.querySelector('#michael').addEventListener('click', filterPiesEvent);
   document.querySelector('#matt').addEventListener('click', filterPiesEvent);
+  document.querySelector('#all').addEventListener('click', filterPiesEvent);
 }
 
 const init = () => {
