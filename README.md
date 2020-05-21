@@ -8,4 +8,4 @@ For this project, I experimented with Event Listeners to see how they worked. As
 - Run any http server `$ hs` or code editor to view project 👀
 
 ## Technologies Used
-[![JavaScript](https://img.shields.io/badge/-JavaScript-2c9fcc?style=flat-square)](#) [![HTML](https://img.shields.io/badge/-HTML-2c9fcc?style=flat-square)](#) [![CSS](https://img.shields.io/badge/-CSS-2c9fcc?style=flat-square)](#) [![DOM](https://img.shields.io/badge/-DOM-2c9fcc?style=flat-square)](#) [![Event Listeners](https://img.shields.io/badge/-Event%20Listeners-2c9fcc?style=flat-square)](#)
+[![Vanilla JavaScript](https://img.shields.io/badge/-Vanilla%20JavaScript-2c9fcc?style=flat-square)](#) [![HTML](https://img.shields.io/badge/-HTML-2c9fcc?style=flat-square)](#) [![CSS](https://img.shields.io/badge/-CSS-2c9fcc?style=flat-square)](#)
